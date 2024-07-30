@@ -15,6 +15,8 @@ public class Main {
 
         AppConfig bean=context.getBean(AppConfig.class);
 
+        LocalBean localBean=context.getBean(LocalBean.class);
+
 
         // Use the bean
         myBean.doSomething();
@@ -22,6 +24,11 @@ public class Main {
         bean.setState("telangana");
         System.out.println(bean.getCity());
         System.out.println(bean.getState());
+        localBean.doSomething();
+
+
+
 
     }
+
 }

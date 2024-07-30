@@ -11,7 +11,14 @@ public class AppConfig {
 
     @Bean
     public MyBean myBean() {
-        return new MyBean();
+        return new MyBean("koko");
+    }
+    @Bean
+    public LocalBean myLocalBean(){
+        return  new LocalBean();
+    }
+    public LocalBean myLocalBeans(){
+        return new LocalBean();
     }
 
     public String getState() {

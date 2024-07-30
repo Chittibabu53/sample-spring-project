@@ -7,4 +7,8 @@ public class MyBean {
         System.out.println("MyBean is doing something!");
     }
 
+    MyBean(String name){
+        System.out.println(name);
+    }
+
 }
