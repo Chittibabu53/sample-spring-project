@@ -17,6 +17,8 @@ public class Main {
 
         LocalBean localBean=context.getBean(LocalBean.class);
 
+        MessagePrinter messagePrinter = context.getBean(MessagePrinter.class);
+
 
         // Use the bean
         myBean.doSomething();
@@ -25,7 +27,7 @@ public class Main {
         System.out.println(bean.getCity());
         System.out.println(bean.getState());
         localBean.doSomething();
-
+        messagePrinter.printMessage();
 
 
 
