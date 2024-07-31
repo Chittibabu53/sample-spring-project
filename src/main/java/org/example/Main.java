@@ -19,15 +19,8 @@ public class Main {
 
         MessagePrinter messagePrinter = context.getBean(MessagePrinter.class);
 
-
-        // Use the bean
-        myBean.doSomething();
-        bean.setCity("hyderabad");
-        bean.setState("telangana");
-        System.out.println(bean.getCity());
-        System.out.println(bean.getState());
-        localBean.doSomething();
-        messagePrinter.printMessage();
+        MyService myService = context.getBean(MyService.class);
+        myService.demonstratePrototypeScope();
 
 
 
