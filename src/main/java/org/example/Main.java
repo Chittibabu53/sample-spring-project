@@ -11,16 +11,26 @@ public class Main {
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
         // Retrieve the bean from the context
-        MyBean myBean = context.getBean(MyBean.class);
+//        MyBean myBean = context.getBean(MyBean.class);
+//
+//        AppConfig bean=context.getBean(AppConfig.class);
+//
+//        LocalBean localBean=context.getBean(LocalBean.class);
+//
+//        MessagePrinter messagePrinter = context.getBean(MessagePrinter.class);
+//
+//        MyService myService = context.getBean(MyService.class);
+//        myService.demonstratePrototypeScope();
+//
+//
+//        messagePrinter.singleTonScope();
 
-        AppConfig bean=context.getBean(AppConfig.class);
+        Settler settler=context.getBean(Settler.class);
 
-        LocalBean localBean=context.getBean(LocalBean.class);
+        settler.printSettlerInjection();
 
-        MessagePrinter messagePrinter = context.getBean(MessagePrinter.class);
 
-        MyService myService = context.getBean(MyService.class);
-        myService.demonstratePrototypeScope();
+
 
 
 

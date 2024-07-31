@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Scope;
 
 @Configuration
 @ComponentScan(basePackages = "org.example")
+
 public class AppConfig {
     private  String state;
     private String City;
@@ -46,4 +47,20 @@ public class AppConfig {
     public MyPrototypeBean myPrototypeBean() {
         return new MyPrototypeBean();
     }
+
+    @Bean
+    public SetterInjection setterInjection(){
+        return new SetterInjection();
+    }
+
+    @Bean
+    public Settler settler(){
+
+        Settler obj=new Settler();
+        obj.setSetterInjection(setterInjection());
+
+        return obj;
+    }
+
+
 }
